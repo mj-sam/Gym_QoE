@@ -1,45 +1,79 @@
-# gym-qoe
-Code repository for the paper entitled "Reinforcement Learning-Driven Service Placement in 6G Networks across the Compute Continuum", submitted to CNSM 2025.
-
 # Gym_QoE
-📘 How to Run the RL Agents
-This guide explains how to run training and testing experiments using the run_csv.py script in this repository. The script supports various reinforcement learning algorithms and configurations for the Gym-QoE environment.
 
-📁 Prerequisites
-Make sure the following packages are installed:
-`pip install -r requirements.txt`
+This repository contains the code and experiments for the paper:
 
+**"The Role of QoE in the Deployment of Extended Reality Services in the 6G Compute Continuum"**, submitted to **CNSM 2025**.
 
-🔧 Training Example Usage :
+---
 
-Run the following to train a model using the configurations in execution_config.csv:
+## 🚀 Getting Started
 
-`python run_csv.py \
+### 📦 Prerequisites
+
+Ensure you have the required Python packages installed:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🧠 Running the RL Agents
+
+You can train and test reinforcement learning agents in the Gym-QoE environment using the `run_csv.py` script. This script supports multiple RL algorithms and configurations defined in a CSV file.
+
+### 🔧 Example: Training a Model
+
+Run the following command to train a model using the configuration from `execution_config.csv`:
+
+```bash
+python run_csv.py \
   --alg mask_ppo \
   --env_name nne \
   --num_nodes 4 \
   --reward multi \
   --training \
   --steps 50000 \
-  --total_steps 200000`
+  --total_steps 200000
+```
 
-Read multiple configurations from execution_config.csv
+### 📋 What This Script Does
 
-Train and optionally test each configuration
+- Loads training/testing configurations from `execution_config.csv`
+- Trains and (optionally) tests models for each configuration
+- Saves trained models to `./models/`
+- Logs training metrics to `./logs/` and `./results/`
+- Records performance data in:
+  - `./run_metrics/*.csv` (training)
+  - `./run_metrics_test/*.csv` (testing)
 
-Save trained models to ./models/
+---
 
-Log results to ./logs/ and ./results/
+## 📂 Output Structure
 
-Log the model performance to : run_metrics and run_metrics_test
+- **Logs:** `./logs/[run_name]/`
+- **Trained Models:** `./models/[run_name].zip`
+- **Metrics CSVs:**
+  - Training: `./run_metrics/*.csv`
+  - Testing: `./run_metrics_test/*.csv`
+- **TensorBoard Logs:** `./results/[env]/[reward]/`
 
-📂 Output Files
-Logs: ./logs/[name]/
-Models: ./models/[name].zip
-Metrics: ./run_metrics/*.csv, ./run_metrics_test/*.csv
-TensorBoard logs: ./results/[env]/[reward]/
-To view training performance:
-`tensorboard --logdir ./results`
+### 📈 Visualize with TensorBoard
 
-Analysing The Algorithm Performance :
-To view and analyze the algorithm performance you can see the `Analysis.ipynb`. 
+To visualize training performance:
+
+```bash
+tensorboard --logdir ./results
+```
+
+---
+
+## 📊 Performance Analysis
+
+Use the provided `Analysis.ipynb` notebook to explore and compare algorithm performance across experiments.
+
+---
+
+## 📄 License
+
+This code is made available for academic and research purposes only. Please cite the paper if you use this work.
