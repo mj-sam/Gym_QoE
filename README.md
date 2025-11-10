@@ -2,7 +2,7 @@
 
 This repository contains the code and experiments for the paper:
 
-**"The Role of QoE in the Deployment of Extended Reality Services in the 6G Compute Continuum"**, submitted to **CNSM 2025**.
+**"Reinforcement Learning-based Orchestration of XR applications in Distributed 6G Cloud Infrastructures"**, presented at **CNSM 2025**.
 
 ---
 
