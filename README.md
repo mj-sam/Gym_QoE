@@ -2,7 +2,8 @@
 
 This repository contains the code and experiments for the paper:
 
-**"Reinforcement Learning-based Orchestration of XR applications in Distributed 6G Cloud Infrastructures"**, presented at **CNSM 2025**.
+**"Reinforcement Learning-based Orchestration of XR applications in Distributed 6G Cloud Infrastructures"**, published at **CNSM 2025**. 
+Link to the paper : https://biblio.ugent.be/publication/01K94V3M7M429P9N5JGS9DVHEX
 
 ---
 
